@@ -12,7 +12,7 @@
       <key>license_file</key>
       <string>LICENSES/NVAPI_SDK_License_Agreement.pdf</string>
       <key>name</key>
-      <string>glext</string>
+      <string>nvapi</string>
       <key>platforms</key>
       <map>
         <key>common</key>
