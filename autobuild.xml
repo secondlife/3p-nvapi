@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<llsd>
+<map>
+    <key>package_description</key>
+    <map>
+      <key>copyright</key>
+      <string>Copyright © 2012 NVIDIA Corporation.  All rights reserved.</string>
+      <key>description</key>
+      <string>NVAPI provides an interface to NVIDIA devices.</string>
+      <key>license</key>
+      <string>NVIDIA Corporation Software License Agreement – NVAPI SDK</string>
+      <key>license_file</key>
+      <string>LICENSES/NVAPI_SDK_License_Agreement.pdf</string>
+      <key>name</key>
+      <string>glext</string>
+      <key>platforms</key>
+      <map>
+        <key>common</key>
+        <map>
+          <key>build_directory</key>
+          <string>nvapi</string>
+          <key>configurations</key>
+          <map>
+            <key>default</key>
+            <map>
+              <key>build</key>
+              <map>
+                <key>arguments</key>
+                <array>
+                  <string>not doing anything</string>
+                </array>
+                <key>command</key>
+                <string>echo</string>
+              </map>
+              <key>default</key>
+              <string>true</string>
+              <key>name</key>
+              <string>default</string>
+            </map>
+          </map>
+          <key>manifest</key>
+          <array>
+            <string>include/nvapi</string>
+            <string>lib/release</string>
+          </array>
+          <key>name</key>
+          <string>common</string>
+        </map>
+        <key>windows</key>
+        <map>
+          <key>configurations</key>
+          <map>
+            <key>default</key>
+            <map>
+              <key>build</key>
+              <map>
+              </map>
+              <key>default</key>
+              <string>true</string>
+              <key>name</key>
+              <string>default</string>
+            </map>
+          </map>
+          <key>name</key>
+          <string>windows</string>
+        </map>
+      </map>
+      <key>version</key>
+      <string>304</string>
+    </map>
+    <key>type</key>
+    <string>autobuild</string>
+    <key>version</key>
+    <string>1.2</string>
+  </map>
+</llsd>
