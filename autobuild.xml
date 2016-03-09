@@ -27,10 +27,10 @@
               <map>
                 <key>arguments</key>
                 <array>
-                  <string>not doing anything</string>
+                  <string>../build-cmd.sh</string>
                 </array>
                 <key>command</key>
-                <string>echo</string>
+                <string>bash</string>
               </map>
               <key>default</key>
               <string>true</string>
@@ -42,21 +42,22 @@
           <array>
             <string>include/nvapi</string>
             <string>lib/release</string>
+            <string>LICENSES</string>
           </array>
           <key>name</key>
           <string>common</string>
         </map>
+
         <key>windows</key>
         <map>
+          <key>build_directory</key>
+          <string>stage</string>
           <key>configurations</key>
           <map>
             <key>default</key>
             <map>
-              <key>build</key>
-              <map>
-              </map>
               <key>default</key>
-              <string>true</string>
+              <boolean>true</boolean>
               <key>name</key>
               <string>default</string>
             </map>
@@ -64,9 +65,10 @@
           <key>name</key>
           <string>windows</string>
         </map>
+
       </map>
       <key>version_file</key>
-      <string>../VERSION.txt</string>
+      <string>VERSION.txt</string>
     </map>
     <key>type</key>
     <string>autobuild</string>
