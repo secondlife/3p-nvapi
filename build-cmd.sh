@@ -6,19 +6,26 @@ cd "$(dirname "$0")"
 set -x
 # make errors fatal
 set -e
+# complain about unset env variables
+set -u
 
 # Check autobuild is around or fail
 if [ -z "$AUTOBUILD" ] ; then 
     fail0
 fi
 if [ "$OSTYPE" = "cygwin" ] ; then
-    export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
+    autobuild="$(cygpath -u $AUTOBUILD)"
+else
+    autobuild="$AUTOBUILD"
 fi
 
 # Load autobuild provided shell functions and variables
 set +x
-eval "$("$AUTOBUILD" source_environment)"
+eval "$("$autobuild" source_environment)"
 set -x
+
+# set LL_BUILD and friends ... moot since we're not building anything
+#set_build_variables convenience Release
 
 NVAPI_ROOT_NAME="nvapi"
 NVAPI_VERSION="361"
