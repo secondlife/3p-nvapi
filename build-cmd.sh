@@ -28,7 +28,7 @@ set -x
 #set_build_variables convenience Release
 
 NVAPI_ROOT_NAME="nvapi"
-NVAPI_VERSION="361"
+NVAPI_VERSION="352"
 
 top="$(pwd)"
 stage="$(pwd)/stage"
