@@ -49,10 +49,10 @@ pushd "$NVAPI_ROOT_NAME$NVAPI_VERSION"
                 then cp "lib/release/nvapi.lib" "$stage/lib/release/nvapi.lib"
                 else cp "lib/release/nvapi64.lib" "$stage/lib/release/nvapi.lib"
             fi
-
-            cp "include/nvapi/nvHLSLExtns.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvHLSLExtnsInternal.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvShaderExtnEnums.h" "$stage/include/nvapi/"
+\
+            cp "include/nvapi/nvapi.h" "$stage/include/nvapi/"
+            cp "include/nvapi/NvApiDriverSettings.c" "$stage/include/nvapi/"
+            cp "include/nvapi/NvApiDriverSettings.h" "$stage/include/nvapi/"
             cp "include/nvapi/nvapi_lite_common.h" "$stage/include/nvapi/"
             cp "include/nvapi/nvapi_lite_d3dext.h" "$stage/include/nvapi/"
             cp "include/nvapi/nvapi_lite_salend.h" "$stage/include/nvapi/"
@@ -60,6 +60,9 @@ pushd "$NVAPI_ROOT_NAME$NVAPI_VERSION"
             cp "include/nvapi/nvapi_lite_sli.h" "$stage/include/nvapi/"
             cp "include/nvapi/nvapi_lite_stereo.h" "$stage/include/nvapi/"
             cp "include/nvapi/nvapi_lite_surround.h" "$stage/include/nvapi/"
+            cp "include/nvapi/nvHLSLExtns.h" "$stage/include/nvapi/"
+            cp "include/nvapi/nvHLSLExtnsInternal.h" "$stage/include/nvapi/"
+            cp "include/nvapi/nvShaderExtnEnums.h" "$stage/include/nvapi/"
 
             cp "LICENSES/NVAPI_SDK_License_Agreement.pdf" "$stage/LICENSES/NVAPI_SDK_License_Agreement.pdf"
         ;;
