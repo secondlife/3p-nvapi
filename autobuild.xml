@@ -3,6 +3,8 @@
 <map>
     <key>package_description</key>
     <map>
+      <key>canonical_repo</key>
+      <string>https://bitbucket.org/lindenlab/3p-nvapi</string>
       <key>copyright</key>
       <string>Copyright © 2012 NVIDIA Corporation.  All rights reserved.</string>
       <key>description</key>
@@ -47,7 +49,6 @@
           <key>name</key>
           <string>common</string>
         </map>
-
         <key>windows</key>
         <map>
           <key>build_directory</key>
@@ -65,7 +66,6 @@
           <key>name</key>
           <string>windows</string>
         </map>
-
       </map>
       <key>version_file</key>
       <string>VERSION.txt</string>
