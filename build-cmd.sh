@@ -32,6 +32,7 @@ NVAPI_VERSION="352"
 
 top="$(pwd)"
 stage="$(pwd)/stage"
+mkdir -p "$stage"
 
 build=${AUTOBUILD_BUILD_ID:=0}
 echo "${NVAPI_VERSION}.${build}" > "${stage}/VERSION.txt"
