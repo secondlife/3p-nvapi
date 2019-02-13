@@ -69,4 +69,3 @@ pushd "$NVAPI_ROOT_NAME$NVAPI_VERSION"
         ;;
     esac
 popd
-pass
