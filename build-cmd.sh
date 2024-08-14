@@ -28,17 +28,12 @@ set -x
 #set_build_variables convenience Release
 
 NVAPI_ROOT_NAME="nvapi"
-NVAPI_VERSION="352"
 
 top="$(pwd)"
 stage="$(pwd)/stage"
 mkdir -p "$stage"
 
-build=${AUTOBUILD_BUILD_ID:=0}
-echo "${NVAPI_VERSION}.${build}" > "${stage}/VERSION.txt"
-
-pushd "$NVAPI_ROOT_NAME$NVAPI_VERSION"
-
+pushd "$NVAPI_ROOT_NAME"
     mkdir -p "$stage/include/nvapi"
     mkdir -p "$stage/LICENSES"
     mkdir -p "$stage/lib/release"
@@ -46,26 +41,12 @@ pushd "$NVAPI_ROOT_NAME$NVAPI_VERSION"
     case "$AUTOBUILD_PLATFORM" in
 
         windows*)
-            if [ "$AUTOBUILD_ADDRSIZE" = 32 ]
-                then cp "lib/release/nvapi.lib" "$stage/lib/release/nvapi.lib"
-                else cp "lib/release/nvapi64.lib" "$stage/lib/release/nvapi.lib"
-            fi
-\
-            cp "include/nvapi/nvapi.h" "$stage/include/nvapi/"
-            cp "include/nvapi/NvApiDriverSettings.c" "$stage/include/nvapi/"
-            cp "include/nvapi/NvApiDriverSettings.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_common.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_d3dext.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_salend.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_salstart.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_sli.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_stereo.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvapi_lite_surround.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvHLSLExtns.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvHLSLExtnsInternal.h" "$stage/include/nvapi/"
-            cp "include/nvapi/nvShaderExtnEnums.h" "$stage/include/nvapi/"
+            cp "amd64/nvapi64.lib" "$stage/lib/release/nvapi.lib"
 
-            cp "LICENSES/NVAPI_SDK_License_Agreement.pdf" "$stage/LICENSES/NVAPI_SDK_License_Agreement.pdf"
+            cp *.h "$stage/include/nvapi/"
+            cp *.c "$stage/include/nvapi/"
+
+            cp "License.txt" "$stage/LICENSES/nvapi.txt"
         ;;
     esac
 popd
